@@ -1,4 +1,4 @@
-import { Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Controller, Delete, Get, Param, Put } from '@nestjs/common';
 import { CarsService } from './cars.service';
 
 @Controller('api/')
@@ -23,11 +23,6 @@ export class CarsController {
   findOneNewCar(@Param('id') id) {
     return `new car ${id}`;
   }
-
-  // @Get('sell-your-car')
-  // sellYourCar() {
-  //   return this.CarsService.createCar();
-  // }
 
   @Put('update-your-car')
   updateYourCar() {

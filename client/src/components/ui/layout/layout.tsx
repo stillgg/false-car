@@ -1,13 +1,15 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
-import { Navbar } from "./navbar";
-import { Footer } from "./footer";
+import classes from './layout.module.scss';
+
+import { Navbar } from './navbar';
+import { Footer } from './footer';
 
 export const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className="container">{children}</main>
+      <main className={`container ${classes.container}`}>{children}</main>
       <Footer />
     </>
   );

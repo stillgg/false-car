@@ -1,3 +1,4 @@
+import { BrandsModule } from './brands/brands.module';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AuthModule } from './auth/auth.module';
@@ -23,6 +24,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
     AuthModule,
     UsersModule,
     CarsModule,
+    BrandsModule,
   ],
   controllers: [AppController],
 })

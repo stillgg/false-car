@@ -1,13 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import { Sequelize } from 'sequelize-typescript';
 import { Car } from './models/car.model';
 
 @Injectable()
 export class CarsService {
   constructor(
     @InjectModel(Car)
-    private carModel: typeof Car, // private sequelize: Sequelize,
+    private carModel: typeof Car,
   ) {}
 
   // async createCar() {
